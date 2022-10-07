@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    background: linear-gradient(-90deg, #B0F2B4, #F97933, #AB33A2);
+    background-size: 600% 600%;
+    animation: GradientAnimation 20s ease infinite;
+}
+@keyframes GradientAnimation {
+    0%{background-position: 0% 43%}
+    50%{background-position: 100% 57%}
+    100%{background-position: 0% 43%}
+}
+.slider {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    border: double 5px #AB33A2;
+    border-radius: 15px;
+    background-color: #fff;
+    align-items: center;
+    margin-top: 15%;
+}
+.images {
+    display: flex;
+    width: 100%;
+}
+.images img {
+    height: 150px;
+    width: 100%;
+    transition: all 1s ease;
+}
+.images input {
+    display: none;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #AB33A2 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover {background: #AB33A2;}
+#img1:checked ~ .m1 {
+    background: rgb(255, 255, 255);
+    margin-left: 0;
+}
+#img2:checked ~ .m2 {
+    background: rgb(255, 255, 255);
+    margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+   background: #fff; 
+   margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+    background: #fff;
+    margin-left: -300%;
+}
+#img5:checked ~ .m5 {
+    background: #fff;
+    margin-left: -400%;
+}
+#img6:checked ~ .m6 {
+    background: #fff;
+    margin-left: -500%;
+}
